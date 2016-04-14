@@ -1,0 +1,50 @@
+<html ng-app="automato">
+    <head>
+       <meta charset="UTF-8">
+        <title>Automato Deterministico</title>
+    
+    <style>
+        .jumbotron{
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            text-align: center;
+        }   
+        
+        img{
+            padding: 20px 0 30px 0;
+        }
+        
+        p{
+            color: #666;
+           
+        }
+    </style>    
+    </head>
+    
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+    <body ng-controller="init">
+        <div class="jumbotron">
+            <h4>{{app}}</h4>
+          
+            <input type="text" ng-model="word" name="word">
+            <button ng-click="testWord(word)" class="btn btn-primary" ng-disabled="!word">Testar</button>
+            <button ng-click="clear()" class="btn btn-warning">Limpar</button>
+            
+            <hr>
+            <div class="panel panel-default" ng-if="isTested">
+                <div class="panel-body">
+                    <h2><strong>{{msg}}</strong></h2>
+                </div>
+            </div>
+                
+            
+          
+        </div>
+          
+    <script src="lib/angular/angular.min.js"></script>         
+    <script src="automato.js"></script>       
+    </body>
+    
+</html>
